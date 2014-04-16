@@ -144,7 +144,7 @@ module.exports = function(grunt) {
             stderr: true,
             failOnError: true
           },
-          command: 'git remote update; git checkout origin/develop -- src && git add src'
+          command: 'git remote update; git checkout origin/develop --force -- src && git reset HEAD -- src'
         },
         inkdoc: {
             options: {
