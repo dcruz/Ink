@@ -11,4 +11,4 @@ branches:
 before_script:
   - gem install compass
   - npm install -g grunt-cli
-script: "grunt --verbose"
+script: "grunt --verbose css js docs"

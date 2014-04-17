@@ -144,7 +144,11 @@ module.exports = function(grunt) {
             stderr: true,
             failOnError: true
           },
-          command: 'git remote update; git checkout origin/develop --force -- src && git reset HEAD -- src'
+          command: 'rm -rf develop.zip Ink-develop src/js;' +
+            'wget https://github.com/sapo/Ink/archive/develop.zip;' +
+            'unzip develop;' +
+            'mv Ink-develop/src/js src/;' +
+            'rm -rf Ink-develop develop.zip'
         },
         inkdoc: {
             options: {
